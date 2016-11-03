@@ -19,7 +19,7 @@
             android:id="@+id/ll_container"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            app:visibleCount = "2"
+            app:visibleCount = "3"
             app:indicatorColor="@color/header_normal"
             >
             <TextView

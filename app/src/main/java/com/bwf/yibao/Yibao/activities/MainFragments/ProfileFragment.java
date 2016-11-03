@@ -28,7 +28,7 @@ import java.util.List;
 
 
 public class ProfileFragment extends BaseFragment {
-    TextView tv_tab_01, tv_tab_02, tv_empty_view;
+    TextView tv_tab_01, tv_tab_02,tv_tab_03, tv_empty_view;
     TextView selectedView;
     ListView listView_goodsList;
     ViewpagerIndicator viewpagerIndicator;
@@ -50,12 +50,13 @@ public class ProfileFragment extends BaseFragment {
     protected void initView(View rootView) {
         tv_tab_01 = findViewByIdNoCast(R.id.tv_tab_01);
         tv_tab_02 = findViewByIdNoCast(R.id.tv_tab_02);
+        tv_tab_03 = findViewByIdNoCast(R.id.tv_tab_03);
         tv_empty_view = findViewByIdNoCast(R.id.empty_view);
         tv_tab_01.setSelected(true);
         selectedView = tv_tab_01;
         listView_goodsList = findViewByIdNoCast(R.id.listView_goodsList);
         listView_goodsList.setEmptyView(tv_empty_view);
-        setOnClick(tv_tab_01, tv_tab_02);
+        setOnClick(tv_tab_01, tv_tab_02, tv_tab_03);
         viewpagerIndicator = findViewByIdNoCast(R.id.ll_container);
 
     }
@@ -102,14 +103,21 @@ public class ProfileFragment extends BaseFragment {
                 selectedView = tv_tab_01;
                 selectedView.setSelected(true);
                 viewpagerIndicator.startSroll(0);
-                queryCollection();
+                //queryCollection();
                 break;
             case R.id.tv_tab_02:
                 selectedView.setSelected(false);
                 selectedView = tv_tab_02;
                 selectedView.setSelected(true);
                 viewpagerIndicator.startSroll(1);
-                queryPublishedGoods();
+                //queryPublishedGoods();
+                break;
+            case R.id.tv_tab_03:
+                selectedView.setSelected(false);
+                selectedView = tv_tab_03;
+                selectedView.setSelected(true);
+                viewpagerIndicator.startSroll(2);
+                //queryPublishedGoods();
                 break;
         }
     }

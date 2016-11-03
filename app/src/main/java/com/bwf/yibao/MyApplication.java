@@ -58,6 +58,8 @@ public class MyApplication extends Application {
         JPushInterface.setDebugMode(true);
         //Zxing
         ZXingLibrary.initDisplayOpinion(this);
+        //baidu
+
         getUserInfo();
     }
     public static MyApplication getApplication(){

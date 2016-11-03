@@ -29,7 +29,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 repositories{
     flatDir{
@@ -51,4 +55,5 @@ dependencies {
     compile 'cn.jiguang:jpush:2.+'
     compile name: 'SMSSDK-2.1.1', ext: 'aar'
     compile project(':lib-zxing')
+    compile files('libs/BaiduLBS_Android.jar')
 }
