@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bwf.yibao.Yibao.activities.LoginActivity">
+    <include layout="@layout/login_custom_toolbar"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_large"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/login_edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/login_icn_mobile"
+            android:layout_marginTop="@dimen/padding_mid"
+            android:drawablePadding="@dimen/padding_mid"
+            android:hint="请输入手机号"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/textsize_standard"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_mid"
+            >
+            <EditText
+                android:id="@+id/login_edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/login_icn_password"
+                android:drawablePadding="@dimen/padding_mid"
+                android:textSize="@dimen/textsize_standard"
+                android:hint="请输入密码"
+                android:textColorHint="@color/gray"
+                />
+            <TextView
+                android:id="@+id/login_tv_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/login_edt_password"
+                android:layout_alignBaseline="@id/login_edt_password"
+                android:text="忘记密码?"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/colorPrimary"
+
+                android:textSize="@dimen/textsize_small"
+                />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/btn_bg_blue_selector"
+            android:text="sign in"
+            android:textSize="@dimen/textsize_large"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:clickable="true"
+    android:orientation="vertical">
+    <!-- 菜单的头部-->
+    <LinearLayout
+        android:id="@+id/ll_menu_head_before_login"
+        style="@style/menu_header"
+        android:background="@mipmap/head_bg"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <!-- 状态栏的高度-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"></View>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:text="log in ，join now..."
+            android:textSize="@dimen/textsize_large"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            />
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="sign in"
+            android:background="@drawable/btn_bg_gray_selector"
+            android:textColor="@drawable/tv_color_gray_selector"
+            android:textSize="@dimen/textsize_large" />
+    </LinearLayout>
+    <!--登录后的布局-->
+    <LinearLayout
+        android:id="@+id/ll_menu_head_after_login"
+        style="@style/menu_header"
+        android:visibility="visible"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"></View>
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_head_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            fresco:viewAspectRatio="1"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderWidth="2dp"
+            fresco:roundingBorderColor="@color/white"
+            fresco:placeholderImage="@mipmap/placeholder_avatar_90"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:actualImageScaleType="focusCrop"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_mid"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fresh fish"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_mid"
+                />
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_mid"
+                android:padding="@dimen/padding_small"
+                android:text="lv.1"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rg_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <RadioButton
+            android:id="@+id/rb1"
+           style="@style/menuItem"
+            android:drawableLeft="@mipmap/home_blue"
+            android:text="@string/home"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ccc"></View>
+
+        <RadioButton
+            android:id="@+id/rb2"
+            style="@style/menuItem"
+            android:drawableLeft="@mipmap/user_blue"
+            android:text="@string/profile"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ccc"></View>
+
+        <RadioButton
+            android:id="@+id/rb3"
+            style="@style/menuItem"
+            android:drawableLeft="@mipmap/twitter_light"
+            android:text="@string/publish"
+            android:drawablePadding="6dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ccc"></View>
+
+        <RadioButton
+            android:id="@+id/rb4"
+            style="@style/menuItem"
+            android:drawableLeft="@mipmap/app_draw"
+            android:text="@string/more"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/settings"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/textsize_standard"
+            android:gravity="center"
+            android:background="@drawable/selector_white_gray_bg"
+            />
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/exit"
+            android:textColor="@color/color_666"
+            android:gravity="center"
+            android:padding="@dimen/padding_mid"
+            android:textSize="@dimen/textsize_standard"
+            android:background="@drawable/selector_white_gray_bg"
+            android:layout_marginLeft="1dp"
+
+            />
+    </LinearLayout>
+</LinearLayout>

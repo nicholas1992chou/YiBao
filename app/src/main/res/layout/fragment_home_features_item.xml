@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.facebook.drawee.view.SimpleDraweeView
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/simple_drawee_view"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    fresco:viewAspectRatio="1"
+    fresco:roundAsCircle="true"
+    fresco:actualImageScaleType="focusCrop"
+    />
+   <!-- <TextView
+        android:id="@+id/tv_fg_feature_item_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="默认值"
+        android:gravity="center"
+        android:textSize="12sp"
+        />-->
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+    <ImageButton
+        android:id="@+id/mLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_small"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@mipmap/actionbar_menu"
+        />
+        <TextView
+            android:id="@+id/mCenter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_small"
+            android:drawableLeft="@mipmap/actionbar_search"
+            android:drawablePadding="@dimen/padding_small"
+            android:hint="请输入商品名"
+            android:textColorHint="@color/list_divider_light"
+            android:textSize="@dimen/textsize_mid"
+            android:background="@drawable/shape_bg"
+            android:layout_marginLeft="@dimen/margin_mid"
+            android:layout_marginRight="@dimen/margin_mid"
+            android:textColor="@color/white"
+
+            />
+    <ImageButton
+        android:id="@+id/mRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/home_title_scan"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:visibility="visible"
+        android:padding="8dp"
+        />
+    </LinearLayout>
+</LinearLayout>
